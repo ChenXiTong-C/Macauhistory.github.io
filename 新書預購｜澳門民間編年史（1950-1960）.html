@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>新書預購｜澳門民間編年史（1950-1960）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#e9e6de;
+  --paper-2:#f4f2ec;
+  --ink:#141b22;
+  --ink-soft:#4a5560;
+  --rule:#c3bdb0;
+  --seal:#8c2f24;
+  --mark:#141b22;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --paper:#11161b;
+    --paper-2:#171e25;
+    --ink:#e7e4dc;
+    --ink-soft:#9aa5b0;
+    --rule:#333d47;
+    --seal:#c4604f;
+    --mark:#e7e4dc;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11161b;
+  --paper-2:#171e25;
+  --ink:#e7e4dc;
+  --ink-soft:#9aa5b0;
+  --rule:#333d47;
+  --seal:#c4604f;
+  --mark:#e7e4dc;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;
+  font-size:16px;
+  line-height:1.85;
+}
+img{max-width:100%}
+.wrap{width:100%;max-width:62rem;margin:0 auto;padding:0 1.4rem}
+
+/* ── 頁首 ── */
+.masthead{border-bottom:1px solid var(--rule);padding:1.1rem 0}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.sitename{
+  font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.05rem;
+  letter-spacing:.16em;margin:0;
+}
+.masthead span{font-size:.82rem;color:var(--ink-soft);letter-spacing:.08em}
+
+/* ── 書名區 ── */
+.hero{padding:4.5rem 0 2.6rem}
+.hero h1{
+  font-family:"Noto Serif TC",serif;font-weight:900;
+  font-size:clamp(2.3rem,8vw,4.6rem);
+  line-height:1.12;margin:0 0 .5rem;letter-spacing:.01em;
+}
+.hero h1 .span-years{display:block;font-weight:400;font-size:.42em;letter-spacing:.3em;margin-top:.8rem;color:var(--ink-soft)}
+.byline{margin:1.6rem 0 0;font-size:.95rem;color:var(--ink-soft)}
+.byline b{font-weight:500;color:var(--ink)}
+
+/* ── 日曆陣列 ── */
+.grid-note{margin:2.8rem 0 .8rem;font-size:.9rem;color:var(--ink-soft)}
+.calendar{display:flex;flex-direction:column;gap:5px;margin-bottom:.9rem}
+.yearline{display:flex;align-items:center;gap:.6rem}
+.yearline .y{
+  font-family:"Noto Serif TC",serif;font-size:.78rem;color:var(--ink-soft);
+  width:2.6rem;flex:none;text-align:right;line-height:1;
+}
+.days{display:flex;gap:1px;flex:1;height:12px}
+.days i{flex:1;background:var(--mark);opacity:.26;border-radius:1px}
+.days i.lit{opacity:.9}
+.total{font-size:.86rem;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:.7rem}
+
+/* ── 內文 ── */
+section{padding:3.4rem 0;border-top:1px solid var(--rule)}
+h2{
+  font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.35rem;
+  margin:0 0 1.2rem;
+}
+.prose{max-width:38rem;font-size:1.02rem}
+.prose p{margin:0 0 1.1rem}
+
+/* ── 價格 ── */
+.plans{display:grid;grid-template-columns:1fr;gap:1rem;max-width:46rem}
+@media(min-width:40rem){.plans{grid-template-columns:1fr 1fr}}
+.plan{
+  background:var(--paper-2);border:1px solid var(--rule);
+  padding:1.5rem 1.4rem;display:flex;flex-direction:column;gap:.35rem;
+}
+.plan h3{margin:0;font-size:1rem;font-weight:500;font-family:"Noto Sans TC",sans-serif}
+.plan .price{
+  font-family:"Noto Serif TC",serif;font-size:2.3rem;font-weight:600;
+  line-height:1.2;color:var(--seal);
+}
+.plan .price small{font-size:.9rem;font-weight:400;color:var(--ink-soft);margin-left:.3rem}
+.plan p{margin:.2rem 0 0;font-size:.9rem;color:var(--ink-soft);line-height:1.7}
+
+.pay{
+  display:inline-block;align-self:flex-start;margin-top:1.1rem;
+  background:var(--seal);color:#fff;text-decoration:none;
+  padding:.7rem 1.5rem;border-radius:2px;letter-spacing:.08em;font-size:.95rem;
+}
+.pay:hover{opacity:.88}
+
+/* ── 表單 ── */
+form{max-width:34rem}
+label{display:block;font-size:.9rem;margin:1.1rem 0 .35rem}
+input,select,textarea{
+  width:100%;font:inherit;font-size:1rem;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--rule);
+  padding:.65rem .8rem;border-radius:2px;
+}
+textarea{min-height:5rem;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
+  outline:2px solid var(--seal);outline-offset:2px;
+}
+.qty{display:flex;gap:.8rem}
+.qty>div{flex:1}
+button{
+  margin-top:1.6rem;font:inherit;font-size:1rem;cursor:pointer;
+  background:var(--seal);color:#fff;border:none;
+  padding:.8rem 1.8rem;border-radius:2px;letter-spacing:.08em;
+}
+button:hover{opacity:.88}
+.result{
+  margin-top:1.4rem;border:1px solid var(--rule);background:var(--paper-2);
+  padding:1.1rem 1.2rem;font-size:.95rem;white-space:pre-wrap;display:none;
+}
+.result.show{display:block}
+.result strong{display:block;margin-bottom:.5rem;font-weight:500}
+
+footer{border-top:1px solid var(--rule);padding:2.2rem 0 3rem;font-size:.88rem;color:var(--ink-soft)}
+footer a{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="sitename">新書預購</p>
+    <span>一紙文化</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>澳門民間編年史<span class="span-years">1950 — 1960</span></h1>
+      <p class="byline">程偉恆　<b>編</b>　／　紙本・電子書同步預購</p>
+
+      <p class="grid-note">全書收錄範圍：每一格代表一天，每天至少節錄一則當日發生的事。</p>
+      <div class="calendar" id="calendar" aria-hidden="true"></div>
+      <p class="total" id="total"></p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>關於這本書</h2>
+      <div class="prose">
+        <p>《澳門民間編年史》完全受施白蒂（Beatriz Basto da Silva）所編的《澳門編年史》啟發，暫時形式上基本參照施白蒂一書，簡單說就是從一九五〇年一月一日至一九六〇年一月一日期間，每天都節錄至少一則值得記下當天所發生的事。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>預購方案</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>紙本</h3>
+          <p class="price">70<small>MOP</small></p>
+          <p>實體書一冊。</p>
+          <a class="pay" href="https://buy.stripe.com/28E14o4mubJ8gFx8O55c400" target="_blank" rel="noopener noreferrer">前往付款</a>
+        </div>
+        <div class="plan">
+          <h3>紙本 ＋ 電子書</h3>
+          <p class="price">110<small>MOP</small></p>
+          <p>實體書一冊，另附電子書檔案。</p>
+          <a class="pay" href="https://buy.stripe.com/fZuaEY06eeVk74X6FX5c401" target="_blank" rel="noopener noreferrer">前往付款</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>預購查詢：<a href="mailto:info@macaology16.com">info@macaology16.com</a></p>
+    <p>臉書：<a href="https://www.facebook.com/1paperculture/" target="_blank" rel="noopener noreferrer">一紙文化</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 1950-01-01 至 1960-01-01，逐年畫出日期格
+  var cal = document.getElementById('calendar');
+  var total = 0;
+  for (var y = 1950; y <= 1960; y++){
+    var isLeap = (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+    var n = (y === 1960) ? 1 : (isLeap ? 366 : 365);   // 1960 只收 1 月 1 日
+    total += n;
+    var row = document.createElement('div');
+    row.className = 'yearline';
+    var lab = document.createElement('span');
+    lab.className = 'y';
+    lab.textContent = y;
+    var days = document.createElement('div');
+    days.className = 'days';
+    var frag = document.createDocumentFragment();
+    for (var d = 0; d < n; d++){
+      var i = document.createElement('i');
+      if (d % 7 === 0) i.className = 'lit';
+      frag.appendChild(i);
+    }
+    days.appendChild(frag);
+    row.appendChild(lab);
+    row.appendChild(days);
+    cal.appendChild(row);
+  }
+  document.getElementById('total').textContent =
+    '一九五〇年一月一日至一九六〇年一月一日，共 ' + total.toLocaleString('en-US') + ' 天。';
+
+})();
+</script>
+</body>
+</html>
